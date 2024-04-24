@@ -17,7 +17,9 @@
   {{-- content --}}
   @yield('contect')
   {{-- akhir content --}}
-  
+  {{-- footer --}}
+  @include('layouts.footer')
+
 </body>
 
 </html>

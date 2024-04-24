@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoTaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+route::get('/' , [TodoTaskController::class, 'index'])->name('home');
+
+Route::post('/', [TodoTaskController::class, 'tambah']);
+
+Route::delete('/{id}', [TodoTaskController::class, 'deleteTask']);
+
+
+
+
